@@ -37,7 +37,7 @@ const estilos = StyleSheet.create({
   },
   input: {
     padding: 3,
-    width: 200,
+    width: '100%',
     borderRadius: 10,
     backgroundColor: '#DFE3EE'
   },

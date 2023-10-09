@@ -1,4 +1,4 @@
-import { View, Text, Button, StyleSheet, TextInput, Image } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, TextInput, Image } from 'react-native';
 import logo from '../assets/logo.png';
 
 export default function Inicio({ navigation }) {
@@ -14,11 +14,10 @@ export default function Inicio({ navigation }) {
         <Text style={estilos.textoInput}>Senha</Text>
         <TextInput style={estilos.input} />
       </View>
-      <Button
-        style={{ flex: 1, justifyContent: "center", padding: 16 }}
-        title="Sign In"
-        onPress={() => navigation.navigate('Login')}
-      />
+      <TouchableOpacity style={estilos.botao}
+        onPress={() => navigation.navigate('Login')}>
+        <Text style={estilos.textoBotao}>Sign In</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -37,7 +36,7 @@ const estilos = StyleSheet.create({
     marginBottom: 10
   },
   input: {
-    paddingHorizontal: 3,
+    padding: 3,
     width: 200,
     borderRadius: 10,
     backgroundColor: '#DFE3EE'
@@ -54,6 +53,20 @@ const estilos = StyleSheet.create({
   },
   textoInput: {
     marginRight: 5,
-    fontSize: 14
+    fontSize: 14,
+    fontWeight: "bold"
+  },
+  botao: {
+    marginTop: 16,
+    backgroundColor: "#89D0C4",
+    padding: 10,
+    borderRadius: 6,
+  },
+  textoBotao: {
+    textAlign: "center",
+    color: "#ffffff",
+    fontSize: 16,
+    lineHeight: 26,
+    fontWeight: "bold",
   }
 });

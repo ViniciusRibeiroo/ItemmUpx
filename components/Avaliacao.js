@@ -1,18 +1,13 @@
 import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import logo from '../assets/logo.png';
 
-export default function Login({ navigation }) {
+export default function Avaliacao({ navigation }) {
   return (
     <View style={estilos.container}>
       <Image source={logo} style={estilos.logo} />
-      <Text style={estilos.texto}>Avaliar aprendiz</Text>
-      <View style={estilos.inputContainer}>
-        <Text style={estilos.textoInput}>CPF</Text>
-        <TextInput style={estilos.input} />
-      </View>
-      <TouchableOpacity style={estilos.botao}
-        onPress={() => navigation.navigate('Avaliacao')}>
-        <Text style={estilos.textoBotao}>Buscar</Text>
+      <Text style={estilos.texto}>Avaliação Quadrimestral</Text>      
+      <TouchableOpacity style={estilos.botao}>
+        <Text style={estilos.textoBotao}>Observações</Text>
       </TouchableOpacity>
       <TouchableOpacity style={estilos.botao}
         onPress={() => navigation.navigate('Inicio')}>
@@ -29,22 +24,6 @@ const estilos = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'white',
     marginBottom: 20
-  },
-  inputContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 10
-  },
-  input: {
-    padding: 3,
-    width: 200,
-    borderRadius: 10,
-    backgroundColor: '#DFE3EE'
-  },
-  textoInput: {
-    marginRight: 5,
-    fontSize: 14,
-    fontWeight: "bold"
   },
   texto: {
     paddingVertical: 15,

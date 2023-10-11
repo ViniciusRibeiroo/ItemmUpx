@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Inicio from './components/Inicio';
 import Login from './components/Login';
 import Avaliacao from './components/Avaliacao';
+import Observacoes from './components/Observacoes';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,11 @@ export default function App() {
         <Stack.Screen
           name='Avaliacao'
           component={Avaliacao}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name='Observacoes'
+          component={Observacoes}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

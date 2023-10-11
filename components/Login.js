@@ -27,8 +27,7 @@ const estilos = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
-    marginBottom: 20
+    backgroundColor: 'white'
   },
   inputContainer: {
     flexDirection: 'row',
@@ -37,7 +36,7 @@ const estilos = StyleSheet.create({
   },
   input: {
     padding: 3,
-    width: '80%',
+    width: '75%',
     borderRadius: 10,
     backgroundColor: '#DFE3EE'
   },
@@ -58,7 +57,7 @@ const estilos = StyleSheet.create({
   },
   botao: {
     margin: 5,
-    backgroundColor: "#89D0C4",
+    backgroundColor: "#5cd2c6",
     padding: 6,
     borderRadius: 6,
   },

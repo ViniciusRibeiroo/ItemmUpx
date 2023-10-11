@@ -1,18 +1,55 @@
-import { View, Text, TextInput, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import logo from '../assets/logo.png';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function Avaliacao({ navigation }) {
   return (
     <View style={estilos.container}>
-      <Image source={logo} style={estilos.logo} />
-      <Text style={estilos.texto}>Avaliação Quadrimestral</Text>      
-      <TouchableOpacity style={estilos.botao}>
+      <View style={estilos.textoContainer}>
+        <Text style={[estilos.texto, { color: "#5cd2c6" }]}>Charles</Text>
+        <Text style={estilos.texto}>Avaliação Quadrimestral</Text>
+      </View>
+
+      <View style={estilos.avaliarContainer}>
+        <TouchableOpacity style={estilos.avaliar}>
+          <View style={estilos.textoBotaoContainer}>
+            <Text style={estilos.textoBotao}>Avaliar</Text>
+            <Text style={estilos.textoBotao}>0 - 4</Text>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={estilos.avaliar}>
+          <View style={estilos.textoBotaoContainer}>
+            <Text style={estilos.textoBotao}>Avaliar</Text>
+            <Text style={estilos.textoBotao}>4 - 8</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+
+      <View style={estilos.avaliarContainer}>
+        <TouchableOpacity style={estilos.avaliar}>
+          <View style={estilos.textoBotaoContainer}>
+            <Text style={estilos.textoBotao}>Avaliar</Text>
+            <Text style={estilos.textoBotao}>8 - 12</Text>
+          </View>
+        </TouchableOpacity>
+        
+        <TouchableOpacity style={estilos.avaliar}>
+          <View style={estilos.textoBotaoContainer}>
+            <Text style={estilos.textoBotao}>Avaliar</Text>
+            <Text style={estilos.textoBotao}>12 - 16</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+
+      <View style={estilos.botaoContainer}>
+      <TouchableOpacity style={estilos.botao}
+        onPress={() => navigation.navigate('Observacoes')}>
         <Text style={estilos.textoBotao}>Observações</Text>
       </TouchableOpacity>
       <TouchableOpacity style={estilos.botao}
         onPress={() => navigation.navigate('Inicio')}>
         <Text style={estilos.textoBotao}>Voltar para o início</Text>
       </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -20,31 +57,59 @@ export default function Avaliacao({ navigation }) {
 const estilos = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
-    marginBottom: 20
+  },
+  textoContainer: {
+    marginTop: 40,
+    paddingVertical: 6,
+    fontSize: 26,
+    fontWeight: "bold",
+    alignItems: 'center',
   },
   texto: {
-    paddingVertical: 15,
-    fontSize: 20,
-    fontWeight: "bold"
+    paddingVertical: 6,
+    fontSize: 26,
+    fontWeight: "bold",
   },
-  logo: {
-    width: 222,
-    height: 97,
-    marginTop: 70,
+  avaliarContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '80%',
+    marginBottom: 6,
+  },
+  botaoContainer: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    width: '80%',
+    flex: 1,
+    marginBottom: 16
   },
   botao: {
     margin: 5,
-    backgroundColor: "#89D0C4",
+    backgroundColor: "#5cd2c6",
     padding: 6,
     borderRadius: 6,
+  },
+  avaliar: {
+    marginHorizontal: 5,
+    backgroundColor: "#5cd2c6",
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 30,
+    borderRadius: 6,
+    marginTop: 10
+  },
+  textoBotaoContainer: {
+    alignItems: 'center',
   },
   textoBotao: {
     textAlign: "center",
     color: "#ffffff",
-    fontSize: 16,
+    fontSize: 24,
     lineHeight: 26,
     fontWeight: "bold",
   }

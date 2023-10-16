@@ -8,23 +8,20 @@ export default function Observacoes({ navigation }) {
         <Text style={estilos.texto}>Adicionar observações</Text>
       </View>
 
-      <View style={estilos.inputContainer}>
-        <Text style={estilos.texto}>Observações</Text>
-        <TextInput style={estilos.input} />
-      </View>
+      <TextInput style={estilos.input} multiline />
 
-      <TouchableOpacity style={estilos.botao}>
+      <TouchableOpacity style={[estilos.botao, { marginVertical: 30 }]}>
         <Text style={estilos.textoBotao}>Gerar Relatório de Desempenho</Text>
       </TouchableOpacity>
 
       <View style={estilos.botaoContainer}>
-      <TouchableOpacity style={estilos.botao}
+      <TouchableOpacity style={estilos.botaoHome}
         onPress={() => navigation.navigate('Observacoes')}>
-        <Text style={estilos.textoBotao}>Observações</Text>
+        <Text style={estilos.textoBotaoHome}>Observações</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={estilos.botao}
+      <TouchableOpacity style={estilos.botaoHome}
         onPress={() => navigation.navigate('Inicio')}>
-        <Text style={estilos.textoBotao}>Voltar para o início</Text>
+        <Text style={estilos.textoBotaoHome}>Voltar para o início</Text>
       </TouchableOpacity>
       </View>
     </View>
@@ -63,21 +60,30 @@ const estilos = StyleSheet.create({
     padding: 6,
     borderRadius: 6,
   },
-  inputContainer: {
-    alignItems: 'center',
-    marginBottom: 10
-  },
-  input: {
-    padding: 150,
-    width: '75%',
-    borderRadius: 10,
-    backgroundColor: '#DFE3EE'
-  },
   textoBotao: {
     textAlign: "center",
     color: "#ffffff",
     fontSize: 24,
     lineHeight: 26,
     fontWeight: "bold",
-  }
+  },
+  input: {
+    padding: 10,
+    width: '75%',
+    borderRadius: 10,
+    backgroundColor: '#DFE3EE'
+},
+  botaoHome: {
+    margin: 5,
+    backgroundColor: "#5cd2c6",
+    padding: 6,
+    borderRadius: 6,
+  },
+  textoBotaoHome: {
+    textAlign: "center",
+    color: "#ffffff",
+    fontSize: 16,
+    lineHeight: 26,
+    fontWeight: "bold",
+  },
 });

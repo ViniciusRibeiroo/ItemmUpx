@@ -41,13 +41,16 @@ export default function Avaliacao({ navigation }) {
       </View>
 
       <View style={estilos.botaoContainer}>
-      <TouchableOpacity style={estilos.botao}
-        onPress={() => navigation.navigate('Observacoes')}>
-        <Text style={estilos.textoBotao}>Observações</Text>
+      <TouchableOpacity style={estilos.botaoHome}>
+        <Text style={estilos.textoBotaoHome}>Avaliação Quadrimestral</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={estilos.botao}
+      <TouchableOpacity style={estilos.botaoHome}
+        onPress={() => navigation.navigate('Observacoes')}>
+        <Text style={estilos.textoBotaoHome}>Observações</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={estilos.botaoHome}
         onPress={() => navigation.navigate('Inicio')}>
-        <Text style={estilos.textoBotao}>Voltar para o início</Text>
+        <Text style={estilos.textoBotaoHome}>Voltar para o início</Text>
       </TouchableOpacity>
       </View>
     </View>
@@ -112,5 +115,18 @@ const estilos = StyleSheet.create({
     fontSize: 24,
     lineHeight: 26,
     fontWeight: "bold",
-  }
+  },
+  botaoHome: {
+    margin: 5,
+    backgroundColor: "#5cd2c6",
+    padding: 6,
+    borderRadius: 6,
+  },
+  textoBotaoHome: {
+    textAlign: "center",
+    color: "#ffffff",
+    fontSize: 16,
+    lineHeight: 26,
+    fontWeight: "bold",
+  },
 });

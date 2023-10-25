@@ -9,14 +9,16 @@ export default function Avaliacao({ navigation }) {
       </View>
 
       <View style={estilos.avaliarContainer}>
-        <TouchableOpacity style={estilos.avaliar}>
+        <TouchableOpacity style={estilos.avaliar}
+        onPress={() => navigation.navigate('Avaliar 0 - 4')}>
           <View style={estilos.textoBotaoContainer}>
             <Text style={estilos.textoBotao}>Avaliar</Text>
             <Text style={estilos.textoBotao}>0 - 4</Text>
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={estilos.avaliar}>
+        <TouchableOpacity style={estilos.avaliar}
+        onPress={() => navigation.navigate('Avaliar 4 - 8')}>
           <View style={estilos.textoBotaoContainer}>
             <Text style={estilos.textoBotao}>Avaliar</Text>
             <Text style={estilos.textoBotao}>4 - 8</Text>
@@ -25,14 +27,16 @@ export default function Avaliacao({ navigation }) {
       </View>
 
       <View style={estilos.avaliarContainer}>
-        <TouchableOpacity style={estilos.avaliar}>
+        <TouchableOpacity style={estilos.avaliar}
+        onPress={() => navigation.navigate('Avaliar 8 - 12')}>
           <View style={estilos.textoBotaoContainer}>
             <Text style={estilos.textoBotao}>Avaliar</Text>
             <Text style={estilos.textoBotao}>8 - 12</Text>
           </View>
         </TouchableOpacity>
         
-        <TouchableOpacity style={estilos.avaliar}>
+        <TouchableOpacity style={estilos.avaliar}
+        onPress={() => navigation.navigate('Avaliar 12 - 16')}>
           <View style={estilos.textoBotaoContainer}>
             <Text style={estilos.textoBotao}>Avaliar</Text>
             <Text style={estilos.textoBotao}>12 - 16</Text>
@@ -41,12 +45,9 @@ export default function Avaliacao({ navigation }) {
       </View>
 
       <View style={estilos.botaoContainer}>
-      <TouchableOpacity style={estilos.botaoHome}>
-        <Text style={estilos.textoBotaoHome}>Avaliação Quadrimestral</Text>
-      </TouchableOpacity>
       <TouchableOpacity style={estilos.botaoHome}
         onPress={() => navigation.navigate('Observacoes')}>
-        <Text style={estilos.textoBotaoHome}>Observações</Text>
+        <Text style={estilos.textoBotaoHome}>Gerar relatório de desempenho</Text>
       </TouchableOpacity>
       <TouchableOpacity style={estilos.botaoHome}
         onPress={() => navigation.navigate('Inicio')}>
@@ -90,12 +91,6 @@ const estilos = StyleSheet.create({
     width: '80%',
     flex: 1,
     marginBottom: 16
-  },
-  botao: {
-    margin: 5,
-    backgroundColor: "#5cd2c6",
-    padding: 6,
-    borderRadius: 6,
   },
   avaliar: {
     marginHorizontal: 5,

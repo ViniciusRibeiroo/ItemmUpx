@@ -15,13 +15,9 @@ export default function Observacoes({ navigation }) {
       </TouchableOpacity>
 
       <View style={estilos.botaoContainer}>
-      <TouchableOpacity style={estilos.botaoHome}
-        onPress={() => navigation.navigate('Observacoes')}>
-        <Text style={estilos.textoBotaoHome}>Observações</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={estilos.botaoHome}
+      <TouchableOpacity style={estilos.botao}
         onPress={() => navigation.navigate('Inicio')}>
-        <Text style={estilos.textoBotaoHome}>Voltar para o início</Text>
+        <Text style={estilos.textoBotao}>Voltar para o início</Text>
       </TouchableOpacity>
       </View>
     </View>
@@ -54,6 +50,12 @@ const estilos = StyleSheet.create({
     flex: 1,
     marginBottom: 16
   },
+  input: {
+    padding: 10,
+    width: '75%',
+    borderRadius: 10,
+    backgroundColor: '#DFE3EE'
+},
   botao: {
     margin: 5,
     backgroundColor: "#5cd2c6",
@@ -61,25 +63,6 @@ const estilos = StyleSheet.create({
     borderRadius: 6,
   },
   textoBotao: {
-    textAlign: "center",
-    color: "#ffffff",
-    fontSize: 24,
-    lineHeight: 26,
-    fontWeight: "bold",
-  },
-  input: {
-    padding: 10,
-    width: '75%',
-    borderRadius: 10,
-    backgroundColor: '#DFE3EE'
-},
-  botaoHome: {
-    margin: 5,
-    backgroundColor: "#5cd2c6",
-    padding: 6,
-    borderRadius: 6,
-  },
-  textoBotaoHome: {
     textAlign: "center",
     color: "#ffffff",
     fontSize: 16,

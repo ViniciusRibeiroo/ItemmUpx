@@ -4,7 +4,7 @@ export default function Avaliacao({ navigation }) {
   return (
     <View style={estilos.container}>
       <View style={estilos.textoContainer}>
-        <Text style={[estilos.texto, { color: "#5cd2c6" }]}>Charles</Text>
+        <Text style={[estilos.texto, { color: "#5cd2c6" }]}>Bem-Vindo!</Text>
         <Text style={estilos.texto}>Avaliação Quadrimestral</Text>
       </View>
 

@@ -4,7 +4,6 @@ export default function Observacoes({ navigation }) {
   return (
     <View style={estilos.container}>
       <View style={estilos.textoContainer}>
-        <Text style={[estilos.texto, { color: "#5cd2c6" }]}>Olá, Charles</Text>
         <Text style={estilos.texto}>Adicionar observações</Text>
       </View>
 
